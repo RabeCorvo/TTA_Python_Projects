@@ -6,16 +6,20 @@ class Item:
     price = int()
 
 class Fruit(Item):
-    fruitType = ''
-    expirationDate = ''
+    fruitType = 'Mango'
+    expirationDate = '21-8-2020'
 
-class Alchohol(Item):
-    alchoholType = ''
-    refrigerationNeeded = bool()
+class Alcohol(Item):
+    alcoholType = 'Rum'
+    refrigerationNeeded = False
+
     
     
+if __name__ == "__main__":
+
     
     
+          
     
     
     
