@@ -6,20 +6,24 @@ class Admiral:
         self.__privateCode = 'password'
 
     def getPrivateCode(self):
-        print(self.__privateCode)
+        return(self.__privateCode)
 
     
 class Cadet:
     def __init__(self):
         self._proectedCode = ''
 
-user = Cadet()
-user._protectedCode = 's%L9oK!Fv8eE'
-print(user._protectedCode)
 
-user = Admiral()
-user.getPrivateCode()
+def logIn():
+    password = Cadet()
+    password._protectedCode = 's%L9oK!Fv8eE'
+    print("Welcome, Cadet Johnson.")
+    password = Admiral()
+    highSecurity = password.getPrivateCode()
+    if highSecurity == 'password':
+        print("Weclome, Admiral Smith.")
+     
 
 
-
-
+if __name__ == "__main__":
+    logIn()
