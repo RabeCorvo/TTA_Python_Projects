@@ -9,7 +9,7 @@ def moveFile():
     destination = '/Users/ywing/Desktop/FileReceiver/'
     filesToSend = sortFile()   
     for i in filesToSend:
-            shutil.move(source+i, destination)
+            shutil.copy(source+i, destination)
    
 def sortFile():
     source = '/Users/ywing/Desktop/FileHolder/'
