@@ -13,8 +13,6 @@ class ParentWindow(Frame):
         self.master.geometry('{}x{}'.format(800, 190))
         self.master.title('Check files')
 
-        self.varBrowse1 = tk.StringVar()
-        self.varBrowse2 = tk.StringVar()
 
         self.btnBrowse1 = tk.Button(self.master, text='Source File', width=12, height=1, command=self.Browse1)
         self.btnBrowse1.grid(row=1, column=0, padx=(30,0), pady=(60,0), sticky=SE)
@@ -25,10 +23,10 @@ class ParentWindow(Frame):
         self.btnCloseProgram = tk.Button(self.master, text='Close Program', width=12, height=2, command= self.cancel)
         self.btnCloseProgram.grid(row=3, column=3, padx=(30,30), pady=(10,0), sticky=SE)
         
-
-        self.txtBrowse1 = Entry(self.master, text=self.varBrowse1, font=("Helvetica", 10), fg='black')
+        
+        self.txtBrowse1 = Entry(self.master, font=("Helvetica", 10), fg='black')
         self.txtBrowse1.grid(row=1, column=1, columnspan=4, padx=(30,30), pady=(60,0), sticky=W+E+N+S)
-        self.txtBrowse2 = Entry(self.master, text=self.varBrowse2, font=("Helvetica", 10), fg='black')
+        self.txtBrowse2 = Entry(self.master, font=("Helvetica", 10), fg='black')
         self.txtBrowse2.grid(row=2, column=1, columnspan=4, padx=(30,30), pady=(10,0), sticky=W+E+N+S)
         root.grid_columnconfigure(3, weight=1)
         
@@ -36,13 +34,12 @@ class ParentWindow(Frame):
         self.master.destroy()
 
     def Browse1(self):
-        #self.source = '/Users/ywing/Desktop/FileHolder'
         self.source = tk.filedialog.askdirectory()
-        self.varBrowse1.insert(0, self.source)
+        self.txtBrowse1.insert(0, self.source)
 
     def Browse2(self):
         self.destination = tk.filedialog.askdirectory()
-        self.varBrowse2.insert(0, self.source)
+        self.txtBrowse2.insert(0, self.destination)
         
         
 if __name__ == "__main__":
