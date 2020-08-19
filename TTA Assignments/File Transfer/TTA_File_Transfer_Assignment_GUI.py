@@ -20,7 +20,7 @@ class ParentWindow(Frame):
         self.btnBrowse1.grid(row=1, column=0, padx=(30,0), pady=(60,0), sticky=SE)
         self.btnBrowse2 = tk.Button(self.master, text='Destination File', width=12, height=1, command=self.Browse2)
         self.btnBrowse2.grid(row=2, column=0, padx=(30,0), pady=(10,0), sticky=SE)
-        self.btnCheckFile = tk.Button(self.master, text='File Check', width=12, height=2, command=fta.moveFile)
+        self.btnCheckFile = tk.Button(self.master, text='File Check', width=12, height=2, command=fta.sortFile)
         self.btnCheckFile.grid(row=3, column=0, padx=(30,0), pady=(10,0), sticky=SE)
         self.btnCloseProgram = tk.Button(self.master, text='Close Program', width=12, height=2, command= self.cancel)
         self.btnCloseProgram.grid(row=3, column=3, padx=(30,30), pady=(10,0), sticky=SE)
@@ -37,14 +37,18 @@ class ParentWindow(Frame):
 
     def Browse1(self):
         self.varBrowse1.set(tk.filedialog.askdirectory())
+        print(self.varBrowse1.get())
+        print(type(self.varBrowse1))
 
     def Browse2(self):
         self.varBrowse2.set(tk.filedialog.askdirectory())
-        
 
+    def GiveSource():
+        source = str(self.varBrowse1.get())
+        
+        
 if __name__ == "__main__":
     root = Tk()
     App = ParentWindow(root)
     root.mainloop()
                     
-                              

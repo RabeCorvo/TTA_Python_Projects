@@ -1,19 +1,14 @@
+
+
 import shutil
 import os
 import time
 import datetime
-import TTA_File_Transfer_Assignment_GUI as ftaGUI
-
-
-def moveFile():
-    source = ftaGUI.varBrowse1.get()
-    destination = ftaGUI.varBrowse2.get()
-    filesToSend = sortFile()   
-    for i in filesToSend:
-            shutil.copy(source+i, destination)
-   
+import TTA_File_Transfer_Assignment_GUI as ftagui
+  
 def sortFile():
-    source = ftaGUI.varBrowse1.get()
+    source = ftagui.GiveSource()
+    destination = '/Users/ywing/Desktop/FileReceiver/'
     fPathList = os.listdir(source)
     fullPathAndModTime = {}
     timeNow = datetime.datetime.now()
@@ -30,7 +25,8 @@ def sortFile():
             for key, val in fullPathAndModTime.items():
                 if val == i:
                     filesToSend.append(key)
-    return filesToSend
+    for i in filesToSend:
+            shutil.copy(source+i, destination)
 
 
 if __name__ == "__main__":
