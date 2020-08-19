@@ -36,15 +36,13 @@ class ParentWindow(Frame):
         self.master.destroy()
 
     def Browse1(self):
-        self.varBrowse1.set(tk.filedialog.askdirectory())
-        print(self.varBrowse1.get())
-        print(type(self.varBrowse1))
+        #self.source = '/Users/ywing/Desktop/FileHolder'
+        self.source = tk.filedialog.askdirectory()
+        self.varBrowse1.insert(0, self.source)
 
     def Browse2(self):
-        self.varBrowse2.set(tk.filedialog.askdirectory())
-
-    def GiveSource():
-        source = str(self.varBrowse1.get())
+        self.destination = tk.filedialog.askdirectory()
+        self.varBrowse2.insert(0, self.source)
         
         
 if __name__ == "__main__":

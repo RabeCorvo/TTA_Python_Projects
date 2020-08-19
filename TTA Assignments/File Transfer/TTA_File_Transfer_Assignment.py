@@ -5,15 +5,16 @@ import os
 import time
 import datetime
 import TTA_File_Transfer_Assignment_GUI as ftagui
-  
+
+source = '/Users/ywing/Desktop/FileHolder/'
+destination = '/Users/ywing/Desktop/FileReceiver/'
+
 def sortFile():
-    source = ftagui.GiveSource()
-    destination = '/Users/ywing/Desktop/FileReceiver/'
-    fPathList = os.listdir(source)
-    fullPathAndModTime = {}
-    timeNow = datetime.datetime.now()
-    last24Hours = timeNow - datetime.timedelta(hours = 24)
-    filesToSend = []
+    fPathList = os.listdir(source)                                      #Lists all files in source directory ex: 'filename.txt')
+    fullPathAndModTime = {}                                             #Creates an empty set/dictionary
+    timeNow = datetime.datetime.now()                                   #Creates variable of current time ex: 2020-08-19 11:52:15.096446
+    last24Hours = timeNow - datetime.timedelta(hours = 24)              #Creates variable of time 24 hours ago time ex: 2020-08-18 11:52:15.096446
+    filesToSend = []                                                    #Creates an empty List
     for i in fPathList:
         fullPath = os.path.join(source,i)                               #Gets full path with file name in folder: 'directory/file.ext'
         modificationTime = os.path.getmtime(fullPath)                   #Gets modification time of file since last epoch: '1596312495.2747788'
@@ -30,4 +31,4 @@ def sortFile():
 
 
 if __name__ == "__main__":
-    pass
+    sortFile()
