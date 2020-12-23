@@ -6,7 +6,7 @@ Projects:
 
 
 
-BigfootApp, Django_Checkbook, Newsletter,
+BigfootApp, Django_Checkbook, DjangoUniversity, TTA Game
 
 BigFootApp: This project is an app that was designed to take advantage of Python and Django features.  Using Python, Django, SQLite, HTML and CSS, the app keeps track of user input data using a form.
 
