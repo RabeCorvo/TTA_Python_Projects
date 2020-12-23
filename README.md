@@ -6,10 +6,12 @@ Projects:
 
 
 
-Car Insurance, TwentyOne, Newsletter,
+BigfootApp, Django_Checkbook, Newsletter,
 
-Car Insurance: This project is an MVC web application that mimics a car insurance website. It takes user's input on policy information and calculates a quote on business logic. There is also an admin page that allows staff to view all of the quotes that have been issued.
+BigFootApp: This project is an app that was designed to take advantage of Python and Django features.  Using Python, Django, SQLite, HTML and CSS, the app keeps track of user input data using a form.
 
-TwentyOne: This project is a fully functional twenty one game played through the console. It deals cards to the user and a dealer and allows the player to decide how much to bet and whether to hit or stay.
+Django_Checkbook: A small app designed to keep track of money in a digital checkbook.
 
-Newsletter: This is another MVC web application that mimics a newsletter signup page. It utilizes a database first setup which saves user information to a local database and then returns the list of people on the newsletter mailing linst in an admin page.
+DjangoUniversity: Another simple app designed to enroll students into a fictional school.
+
+TTA Game: This was a little console game I created while studying the Python language.  It is very basic and silly but fun. The program was an excercise in learning the basic ins and outs of Python.
