@@ -1,6 +1,6 @@
 Python Projects
 
-These are some small projects I made using Python
+These are some projects I made using Python
 
 Projects:
 
